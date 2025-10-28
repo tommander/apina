@@ -18,7 +18,7 @@ use Psr\Log\LoggerInterface;
 /**
  * @psalm-type TestJsonItem = array{title: string, act: array{method: string, url: string, data?: array}, exp: array{method: string, url: string, code: int, data?: array}}
  */
-final class AlboomTest extends TestCase
+final class ApinaDirectTest extends TestCase
 {
     private static LoggerInterface|null $logger = null;
     private static Storage|null $storage = null;
