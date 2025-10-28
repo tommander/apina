@@ -1,0 +1,16 @@
+bordel
+vendor
+node_modules
+galleries
+composer.lock
+package-lock.json
+log_*
+_storage*
+.phpunit.result.cache
+.htaccess
+docs/*.bkp
+public/gallery.mjs
+public/rating.mjs
+public/htmlbuilder.js
+public/index.html
+public/assets

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="TMDRS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+    <description>TMD Ruleset</description>
+
+    <!-- <file>index.php</file> -->
+    <file>public</file>
+    <file>src</file>
+    <file>tests/php</file>
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/bordel*/*</exclude-pattern>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg name="parallel" value="75"/>
+    <arg value="snp"/>
+
+    <rule ref="PSR12"></rule>
+    <rule ref="PHPCompatibility"></rule>
+
+    <config name="testVersion" value="8.2-"/>
+    <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility" />
+</ruleset>

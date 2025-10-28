@@ -1,0 +1,52 @@
+{
+    "name": "tommander/apina",
+    "description": "Apina",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tommander",
+            "email": "8601794+tommander@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "psr/log": "^3.0",
+        "psr/event-dispatcher": "^1.0",
+        "psr/container": "^2.0",
+        "web-token/jwt-library": "^4.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^6.13",
+        "squizlabs/php_codesniffer": "^4.0",
+        "phpcompatibility/php-compatibility": "^10.0@dev",
+        "phpunit/phpunit": "^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apina\\": "src/",
+            "Apina\\Enums\\": "src/Enums/",
+            "Apina\\Helpers\\": "src/Helpers/",
+            "Apina\\Loggers\\": "src/Loggers/",
+            "Apina\\Messages\\": "src/Messages/",
+            "Apina\\Resources\\": "src/Resources/",
+            "Apina\\Storages\\": "src/Storages/",
+            "Apina\\Tests\\": "tests/php/"
+        }
+    },
+    "scripts": {
+        "selfcheck": "composer validate --strict",
+        "phpcs": "phpcs",
+        "psalm": "psalm --show-info=true --no-file-cache --no-reflection-cache --no-cache",
+        "phpunit": "phpunit",
+        "qa": [
+            "@selfcheck",
+            "@phpcs",
+            "@psalm",
+            "@phpunit"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
